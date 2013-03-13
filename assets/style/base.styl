@@ -1,0 +1,175 @@
+@import "config"
+@import "vendors"
+@import "gradients"
+@import "mixins"
+@import "grid"
+@import "reset"
+
+reset_all()
+
+generate-fixed()
+generate-fluid()
+ 
+body
+  font-family: DEFAULT_FONT
+  font-size: DEFAULT_FONT_SIZE
+  line-height: DEFAULT_LINE_HEIGHT  
+  color: TEXT_COLOR
+  background: white
+  position: relative
+
+.text
+  p
+    color: TEXT_COLOR
+    font: 1em DEFAULT_FONT
+    font-weight: normal
+    line-height: 1.5em
+    margin: 0 0 1em
+    text-shadow: 0 1px 0 white
+    &.large
+      font-size: 1.125em
+
+  a
+    color: LINK_COLOR
+    text-decoration: none
+    border-bottom: 1px solid rgba(LINK_COLOR, .1)
+    transition: border .4s ease-in-out
+    text-shadow: 0 1px 0 white
+    &:hover
+      color: LINK_COLOR
+      text-decoration: none
+      border-bottom: 1px solid LINK_COLOR
+    &:active
+      color: LINK_COLOR
+      text-decoration: none
+    &:visited
+      color: VISITED_LINK_COLOR
+      text-decoration: none
+      &:hover
+        border-bottom: 1px solid VISITED_LINK_COLOR
+
+  a.dotted
+    border-bottom: 1px dotted rgba(LINK_COLOR, .3)
+    transition: border .4s ease-in-out
+    &:hover
+      color: LINK_COLOR
+      text-decoration: none
+      border-bottom: 1px dotted LINK_COLOR
+    &:visited
+      color: LINK_COLOR
+      text-decoration: none
+      &:hover
+        border-bottom: 1px dotted LINK_COLOR
+
+  h1
+    color: HEAD_COLOR
+    font: 3em HEAD_FONT
+    font-weight: bold
+    margin: 0 0 1em
+    text-shadow: 0 1px 0 white
+
+  h2
+    color: HEAD_COLOR
+    font: 2em HEAD_FONT
+    font-weight: bold
+    margin: 0 0 1em
+    text-shadow: 0 1px 0 white
+
+  h3
+    color: HEAD_COLOR
+    font: 1.75em HEAD_FONT
+    font-weight: bold
+    margin: 1.75em 0 .75em
+    text-shadow: 0 1px 0 white
+
+  h4
+    color: TEXT_COLOR
+    font: 1.25em DEFAULT_FONT
+    margin: 1.25em 0 .75em
+    font-weight: bold
+    text-transform: uppercase
+    text-shadow: 0 1px 0 white
+
+  h5
+    color: TEXT_COLOR
+    font: 1.25em DEFAULT_FONT
+    margin: 1.25em 0 .75em
+    font-weight: bold
+    text-shadow: 0 1px 0 white
+
+  ul, ol
+    margin: 0 1em 1em
+
+  ul
+    list-style: outside disc
+  ol
+    list-style: outside decimal
+
+  li
+    margin: 0.5em 0
+    text-shadow: 0 1px 0 white
+
+  .center
+    text-align: center
+  .right
+    text-align: left
+  .left
+    text-align: right
+
+  .red
+    color: red
+
+  small
+    font-size: 75%
+
+  table
+    font: normal 1em DEFAULT_FONT
+    border-collapse: collapse
+    width: 100%
+    th
+      color: TEXT_COLOR
+      border-bottom: 2px solid TEXT_COLOR
+      font: bold 1em DEFAULT_FONT
+      text-transform: uppercase
+      padding: 0.5em 1em
+    td
+      color: TEXT_COLOR
+      border-bottom: 1px solid TEXT_COLOR
+      padding: 0.5em 1em
+  .bordered
+    th
+      border: 1px solid TEXT_COLOR
+    td
+      border: 1px solid TEXT_COLOR
+
+  .striped-light
+    tr:nth-child(even)
+      background: rgba(white, .4)
+
+.hnav
+  li
+    font-size: 1em
+    color: black
+    width: 100%
+    overflow: hidden
+    ul
+      margin: 0 0 1.5em
+    a
+      text-decoration: none
+      color: inherit
+      display: block
+      padding: 0.5em 0.75em
+      cursor: pointer
+      user-select: none
+      &:hover
+        color: white
+        background: black
+    li
+      font-size: 0.875em
+      margin: 0
+      a
+        border-bottom: none
+        padding: 0.125em 1em
+
+.hidden
+  display: none

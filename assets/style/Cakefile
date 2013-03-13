@@ -1,0 +1,15 @@
+$ = require "core.js"
+b = require "nbuild"
+
+build = (callback) ->
+  $.parallel [
+    (cb) -> b.ff_stylus "./base.styl", __dirname + "/../../public/base.css", {compress: yes, paths: ["./lib"]}, cb
+    (cb) -> b.ff_stylus "./pages.styl", __dirname + "/../../public/pages.css", {compress: yes, paths: ["./lib"]}, cb
+  ], (err, results) ->
+    console.log if err then err else "OK!"
+
+if task?
+  task "sbuild", -> build(->)
+  task "build" , -> build(->)
+
+exports.build = build
