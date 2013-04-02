@@ -11,6 +11,14 @@
       
       <div class="head">
         <div class="logo"></div>
+        <nav>
+          <ul class="hnav">
+            <li><a href="#">Hello</a></li>
+            <li><a href="#">Материалы</a></li>
+            <li><a href="#">Люди</a></li>
+            <li><a href="#">Компании</a></li>
+          </ul>
+        </nav>
       </div>
 
       {{{yield}}}
