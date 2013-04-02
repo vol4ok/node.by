@@ -1,0 +1,23 @@
+{
+    "name": "node.by",
+    "description": "An official NodeJS belorussian community",
+    "version": "0.0.1",
+    "homepage": "http://node.by",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/vol4ok/node.by.git"
+    },
+    "author": "Des&Tech Team",
+    "main": "./index.js",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "dependencies": {
+        "coffee-script": "1.6.2",
+        "colors":        "0.6.0-1",
+        "express":       "3.1.1",
+        "hogan-express": "0.3.3",
+        "core.js":       "0.4.2"
+    },
+    "devDependencies": {}
+}
